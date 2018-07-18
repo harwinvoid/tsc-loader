@@ -4,6 +4,9 @@ const fs = require('fs')
 let errorEmitted = false
 
 function loader (source) {
+
+  this.cacheable()
+
   const options = getOptions(this) || {}
 
   const {
