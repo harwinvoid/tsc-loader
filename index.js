@@ -20,7 +20,7 @@ function loader (source) {
     return source
   }
 
-  source = `<script>\n ${source} \n <script>`
+  source = `<script>\n ${source} \n </script>`
 
   const tplPath = resourcePath.replace(`${fileName}.vue`, `${fileName}.${tplLang}`)
   const cssPath = resourcePath.replace(`${fileName}.vue`, `${fileName}.${cssLang}`)
