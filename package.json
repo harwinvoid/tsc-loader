@@ -1,0 +1,20 @@
+{
+  "name": "tsc-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harwin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harwinvoid/tsc-loader.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "loader-utils": "^1.1.0",
+    "eslint": "^4.19.0",
+    "eslint-plugin-vue-libs": "^2.1.0"
+  }
+}
