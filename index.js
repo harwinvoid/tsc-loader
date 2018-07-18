@@ -20,6 +20,8 @@ function loader (source) {
     return source
   }
 
+  source = `<script>\n ${source} \n <script>`
+
   const tplPath = resourcePath.replace(`${fileName}.vue`, `${fileName}.${tplLang}`)
   const cssPath = resourcePath.replace(`${fileName}.vue`, `${fileName}.${cssLang}`)
 
@@ -32,18 +34,20 @@ function loader (source) {
     ))
     errorEmitted = true
   }
-  let htmlContent = '';
-  let cssContent = '';
+
+  let htmlContent = ''
+  let cssContent = ''
 
   if (isTplExists) {
     htmlContent = fs.readFileSync(tplPath).toString()
     htmlContent = `<template lang="${tplLang}">\n${htmlContent}\n</template>`
   }
 
-  if (fs.existsSync(cssPath))  {
+  if (isCssExists) {
     cssContent = fs.readFileSync(cssPath).toString()
     cssContent = `<style scoped lang="${cssLang}">\n${cssContent}\n</style>`
   }
+
   return source + htmlContent + cssContent
 }
 
