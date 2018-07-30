@@ -42,13 +42,11 @@ function loader (source) {
   let cssContent = ''
 
   if (isTplExists) {
-    htmlContent = fs.readFileSync(tplPath).toString()
-    htmlContent = `<template lang="${tplLang}">\n${htmlContent}\n</template>`
+    htmlContent = `<template lang="${tplLang}" src="${tplPath}"></template>`
   }
 
   if (isCssExists) {
-    cssContent = fs.readFileSync(cssPath).toString()
-    cssContent = `<style scoped lang="${cssLang}">\n${cssContent}\n</style>`
+    cssContent = `<style scoped lang="${cssLang}" src="${cssPath}"></style>`
   }
 
   return source + htmlContent + cssContent
