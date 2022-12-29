@@ -13,7 +13,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^3.2.1",
     "eslint": "^4.19.0",
     "eslint-plugin-vue-libs": "^2.1.0"
   }
